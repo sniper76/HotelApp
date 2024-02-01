@@ -1,0 +1,52 @@
+{
+  "annotations": {
+    "changelogDate": "20240128130906"
+  },
+  "applications": "*",
+  "entityTableName": "reservation",
+  "fields": [
+    {
+      "fieldName": "checkInDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "checkOutDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "creator",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updater",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Reservation",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "no",
+      "otherEntityName": "room",
+      "relationshipName": "room",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "voucher",
+      "relationshipName": "voucher",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20240128130706"
+  },
+  "applications": "*",
+  "entityTableName": "room_type",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "creator",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updater",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "RoomType",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "roomType",
+      "relationshipName": "room",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

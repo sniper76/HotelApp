@@ -6,8 +6,13 @@
       "home": "홈",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entities",
-        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+        "main": "엔티티",
+        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
+        "hotel": "호텔",
+        "roomType": "룸 타입",
+        "room": "룸",
+        "reservation": "예약",
+        "voucher": "바우처"
       },
       "account": {
         "main": "계정",

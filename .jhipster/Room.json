@@ -1,0 +1,58 @@
+{
+  "annotations": {
+    "changelogDate": "20240128130806"
+  },
+  "applications": "*",
+  "entityTableName": "room",
+  "fields": [
+    {
+      "fieldName": "no",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "promoPrice",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "creator",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updater",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Room",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "roomType",
+      "otherEntityRelationshipName": "room",
+      "relationshipName": "roomType",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "hotel",
+      "relationshipName": "hotel",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

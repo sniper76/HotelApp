@@ -1,0 +1,71 @@
+
+
+/** Product sold by the Online store */
+entity Hotel {
+    name String required
+    type HotelType required
+    location String
+    description String
+    creator Long
+    createdAt Instant
+    updater Long
+    updatedAt Instant
+}
+
+enum HotelType {
+    HOTEL, POOL_VILLA, CONDO, RESIDENCES, RESORT
+}
+
+entity RoomType {
+    name String required
+    description String
+    creator Long
+    createdAt Instant
+    updater Long
+    updatedAt Instant
+}
+
+entity Room {
+    no String required
+    price Integer
+    promoPrice Integer
+    creator Long
+    createdAt Instant
+    updater Long
+    updatedAt Instant
+}
+
+entity Reservation {
+    checkInDate Instant
+    checkOutDate Instant
+    creator Long
+    createdAt Instant
+    updater Long
+    updatedAt Instant
+}
+
+entity Voucher {
+    price Integer required
+    salePrice Integer required
+    creator Long
+    createdAt Instant
+    updater Long
+    updatedAt Instant
+}
+
+relationship OneToOne {
+    Room{roomType} to RoomType{room}
+}
+
+relationship ManyToOne {
+    Hotel{user(login) required} to User with builtInEntity
+    Room{hotel(name)} to Hotel
+    Reservation{room(no)} to Room
+}
+
+relationship OneToMany {
+    Voucher to Reservation{voucher}
+}
+
+service * with serviceClass
+paginate * with pagination
